@@ -1,7 +1,11 @@
 {
   "name": "convert-2-scsb-module",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NYPL-discovery/convert-2-scsb-module.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "standard && mocha test"
