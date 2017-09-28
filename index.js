@@ -42,7 +42,7 @@ function Convert2Scsb () {
    * @param  {bib} object - the Bib response from Sierra API
    * @param  {items} array - the Items response from Sierra API
    */
-  this.parseSierraApi2SCSB = function (bib, items) {
+  this.parseSierraApi2SCSB = function (bib, items, customerCode='NA') {
     var self = this
 
     bib = self.parseApi.modifyBib(bib)
@@ -59,7 +59,7 @@ function Convert2Scsb () {
     record.dataFields = self.parseMrc.extractDataFields(record) // data fields in mij format
 
     // build the new data structures
-    record.items = self.parseMrc.buildItems(record)
+    record.items = self.parseMrc.buildItems(record, customerCode)
     record.recordObj = self.parseMrc.buildRecord(record)
 
     record.xml = builder.buildObject(record.recordObj) + '\n'
