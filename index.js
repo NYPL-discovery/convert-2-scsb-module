@@ -42,7 +42,7 @@ function Convert2Scsb () {
    * @param  {bib} object - the Bib response from Sierra API
    * @param  {items} array - the Items response from Sierra API
    */
-  this.parseSierraApi2SCSB = function (bib, items, customerCode='NA') {
+  this.parseSierraApi2SCSB = function (bib, items, customerCode = 'NA') {
     var self = this
 
     bib = self.parseApi.modifyBib(bib)
